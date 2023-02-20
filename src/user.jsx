@@ -69,39 +69,39 @@ export const UserList = () => {
 
 export const UserEdit = () => {
     const toChoices = items => items.map(item => ({ id: item, name: item }))
-    const TradeProfit = () => {
-        const record = useRecordContext();
-        if (!record) return null;
-        return <p className="profit-parent">Current Trade profit is <span className="green profit"> {record.tradeProfit}</span> Change the value below to add to it. </p>;
-    };
-    const TradeProfitShow = () => (
-        <Show>
-            <SimpleShowLayout>
-                <TradeProfit />
-            </SimpleShowLayout>
-        </Show>
-    )
-    const ReferralBonus = () => {
-        const record = useRecordContext();
-        if (!record) return null;
-        return <p className="profit-parent">Current Referral bonus is <span className="green profit"> {record.referralBonus}</span> Change the value below to add to it. </p>;
-    };
-    const ReferralBonusShow = () => (
-        <Show>
-            <SimpleShowLayout>
-                <ReferralBonus />
-            </SimpleShowLayout>
-        </Show>
-    )
+    // const TradeProfit = () => {
+    //     const record = useRecordContext();
+    //     if (!record) return null;
+    //     return <p className="profit-parent">Current Trade profit is <span className="green profit"> {record.tradeProfit}</span> Change the value below to add to it. </p>;
+    // };
+    // const TradeProfitShow = () => (
+    //     <Show>
+    //         <SimpleShowLayout>
+    //             <TradeProfit />
+    //         </SimpleShowLayout>
+    //     </Show>
+    // )
+    // const ReferralBonus = () => {
+    //     const record = useRecordContext();
+    //     if (!record) return null;
+    //     return <p className="profit-parent">Current Referral bonus is <span className="green profit"> {record.referralBonus}</span> Change the value below to add to it. </p>;
+    // };
+    // const ReferralBonusShow = () => (
+    //     <Show>
+    //         <SimpleShowLayout>
+    //             <ReferralBonus />
+    //         </SimpleShowLayout>
+    //     </Show>
+    // )
     return (
         <>
             <Edit>
                 <SimpleForm>
                     <BooleanInput source="verified" />
                     <BooleanInput source="userCanWithdraw" />
-                    <TradeProfitShow />
+                    {/* <TradeProfitShow /> */}
                     <NumberInput source="tradeProfit" />
-                    <ReferralBonusShow />
+                    {/* <ReferralBonusShow /> */}
                     <NumberInput source="referralBonus" />
                     <NumberInput source="tradingProgress" />
                     <NumberInput source="withdrawalCharges" />
@@ -111,14 +111,14 @@ export const UserEdit = () => {
                     <TextInput source="usdtAddress" />
                     <TextInput source="bitcoinAddress" />
                     <TextInput source="ethereumAddress" />
-                    <TextInput disabled source="name" />
-                    <TextInput disabled source="gender" />
-                    <NumberInput disabled source="phoneNumber" />
+                    <TextInput source="name" />
+                    <TextInput source="gender" />
+                    <NumberInput source="phoneNumber" />
+                    <TextInput source="address" />
+                    <NumberInput source="totalEquity" />
+                    <TextInput source="pendBalance" />
+                    <TextInput source="totalDeposit" />
                     <TextInput disabled multiline source="seedPhrase" />
-                    <TextInput disabled source="address" />
-                    <NumberInput disabled source="totalEquity" />
-                    <TextInput disabled source="pendBalance" />
-                    <TextInput disabled source="totalDeposit" />
                 </SimpleForm>
             </Edit>
         </>
