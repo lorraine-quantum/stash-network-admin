@@ -61,7 +61,7 @@ export const WithdrawalList = () => {
                     <TextField source="owner.name" />
                     <TextField source="amount" />
                     {/* <TextField source="status" /> */}
-                    {/* <MyStatus source='status' /> */}
+                    <MyStatus source='status' />
 
                 </Datagrid>
             )}
@@ -90,8 +90,8 @@ export const WithdrawalEdit = () => {
         <Edit>
             <SimpleForm>
 
-                {/* <SelectInput className="warning" source="status" choices={toChoices(['approved', 'failed', 'pending'])} />
-                <p className="warning">Spelling must match with either  <span>(pending-failed-approved)</span> </p> */}
+                <SelectInput className="warning" source="status" choices={toChoices(['approved', 'failed', 'pending'])} />
+                {/* <p className="warning">Spelling must match with either  <span>(pending-failed-approved)</span> </p> */}
                 <TextInput disabled source="amount" />
                 <TextInput disabled source="owner.name" />
                 <TextInput disabled source="owner.pendBalance" />
